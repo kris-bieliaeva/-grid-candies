@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: "Fredoka One", cursive;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr;
+  grid-template-rows: 1fr 4fr 3fr 2fr;
+  height: 100vh;
+  grid-template-areas: "main main header" "main main candy" "nom yum candy" "footer footer candy";
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
+  grid-template-rows: 1fr 3fr 3fr;
+  grid-template-areas: ". text .";
+  background-color: #FFFADF;
+  grid-area: main;
+  color: #202020;
+}
+main .main {
+  grid-area: text;
+  display: grid;
+  grid-template-rows: 1fr 1.5fr 2fr;
+  max-height: 50vh;
+}
+main .main .logo {
+  color: #D85065;
+  font-size: 20px;
+  align-self: center;
+}
+main .main h1 {
+  font-family: "Overlock", cursive;
+  font-weight: 800;
+  font-size: 45px;
+}
+main .main p {
+  font-family: "Overlock", cursive;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+section.nom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  grid-area: nom;
+  background-color: #C4B35A;
+  font-size: 30px;
+  color: #ffffff;
+  font-family: "Overlock", cursive;
+}
+
+section.yum {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  background-color: #333333;
+  grid-area: yum;
+  font-size: 30px;
+  color: #ffffff;
+  font-family: "Overlock", cursive;
+}
+
+section.diabeetus {
+  background-color: #202020;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-area: footer;
+  color: #5f5f5f;
+  font-size: 30px;
+  font-family: "Overlock", cursive;
+  font-weight: 800;
+}
+
+header {
+  grid-area: header;
+  display: grid;
+  align-items: center;
+}
+
+.candy {
+  grid-area: candy;
+  background: url(girl-and-candy.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.nav ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-areas: "home about . shop burger";
+  align-items: center;
+}
+.nav ul li {
+  list-style: none;
+  cursor: pointer;
+}
+.nav ul li:nth-child(1) {
+  grid-area: home;
+}
+.nav ul li:nth-child(2) {
+  grid-area: about;
+}
+.nav ul li:nth-child(3) {
+  grid-area: shop;
+  color: #D85065;
+}
+.nav ul .burger-menu {
+  grid-area: burger;
+  background: url(menu.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+}
+
+.left, .right {
+  background-color: #eee;
+  width: 100px;
+  border: 0 none;
+  color: #eee;
+  height: 1px;
+}/*# sourceMappingURL=style.css.map */
